@@ -39,7 +39,9 @@
   }
 
   *, *::before, *::after { box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; scrollbar-gutter: stable; }
+  /* En iOS 26 Safari pinta las franjas de arriba y abajo con este color de fondo
+     (ya no usa theme-color); los bordes de la página terminan en el mismo tono para que no se vea el corte */
+  html { -webkit-text-size-adjust: 100%; scrollbar-gutter: stable; background-color: var(--medianoche); }
   p { text-wrap: pretty; }
   body {
     margin: 0;
@@ -107,8 +109,23 @@
     align-items: center;
     padding: 112px var(--gutter) 0;
     overflow: hidden;
-    background: radial-gradient(130% 70% at 50% 0%, #17306A 0%, var(--medianoche) 62%);
+    background:
+      linear-gradient(180deg, var(--medianoche) 0, rgba(8, 18, 46, 0) 110px),
+      radial-gradient(130% 70% at 50% 8%, #17306A 0%, var(--medianoche) 62%);
     text-align: center;
+  }
+  /* Encima del reflector (cuyo desenfoque llega hasta el borde): el borde superior
+     queda del mismo tono que la franja de iOS. La bola y las estrellas van por encima. */
+  .escenario::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(180deg, var(--medianoche) 0, rgba(8, 18, 46, 0) 100%);
+    pointer-events: none;
   }
   @media (min-width: 600px) {
     .escenario { min-height: 860px; }
@@ -160,7 +177,8 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(225, 240, 255, .5) 0%, rgba(92, 225, 230, .12) 70%, transparent 100%);
+    /* Arranca transparente para que el borde superior quede del color de la franja de iOS */
+    background: linear-gradient(180deg, transparent 0%, rgba(225, 240, 255, .5) 13%, rgba(92, 225, 230, .12) 70%, transparent 100%);
     clip-path: polygon(45% 0, 55% 0, 100% 100%, 0 100%);
   }
 
@@ -866,8 +884,12 @@
   /* Cierre: otra vez escenario, con la bola disco colgando */
   .cierre {
     position: relative;
-    padding: 0 var(--gutter) 96px;
-    background: radial-gradient(90% 60% at 50% 100%, rgba(47, 100, 200, .45), transparent 70%), var(--medianoche);
+    padding: 0 var(--gutter) calc(110px + env(safe-area-inset-bottom));
+    /* El resplandor queda detrás del texto y el borde inferior termina en el color de la franja de iOS */
+    background:
+      linear-gradient(0deg, var(--medianoche) 0, rgba(8, 18, 46, 0) 130px),
+      radial-gradient(90% 55% at 50% 62%, rgba(47, 100, 200, .42), transparent 70%),
+      var(--medianoche);
   }
   .cierre__bola {
     position: relative;
