@@ -1,0 +1,1392 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Esteban, Rey del Pop: fiesta de 6 años</title>
+<meta name="description" content="Esteban cumple 6 años y se convierte en el rey del pop. Sábado 21 de noviembre, 11:30 a. m., en el Salón Lumaydani, Tuxtla Gutiérrez.">
+<meta property="og:title" content="Esteban, Rey del Pop: fiesta de 6 años">
+<meta property="og:description" content="Sábado 21 de noviembre, 11:30 a. m. ¡Nos encantaría que nos acompañaras a festejar!">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#08122E">
+<link rel="icon" href="img/bola-disco.svg" type="image/svg+xml">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Unbounded:wght@500..900&family=Yellowtail&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --medianoche: #08122E;
+    --escenario: #13306E;
+    --pista: #2F64C8;
+    --turquesa: #5CE1E6;
+    --hielo: #CFE2F1;
+    --blanco: #F7FAFF;
+
+    /* Cromo de los 80: cielo claro, horizonte oscuro, reflejo abajo */
+    --cromo: linear-gradient(180deg, #FFFFFF 0%, #DCEBFA 30%, #8FB2E0 48%, #1C3270 50.5%, #4E77C2 62%, #CFE2F1 86%, #FFFFFF 100%);
+    --cromo-claro: linear-gradient(160deg, #FFFFFF 0%, #E3ECF6 42%, #C3D2E4 55%, #F1F5FB 100%);
+
+    --font-display: 'Unbounded', 'Arial Black', system-ui, sans-serif;
+    --font-body: 'Bricolage Grotesque', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --font-firma: 'Yellowtail', 'Brush Script MT', cursive;
+
+    --columna: 480px;
+    --gutter: 22px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--medianoche);
+    color: var(--hielo);
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { display: block; max-width: 100%; }
+  button, input { font: inherit; color: inherit; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--turquesa); outline-offset: 3px; }
+  [tabindex="-1"]:focus { outline: none; }
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
+
+  /* Bloquea el scroll mientras el telón está cerrado */
+  .js:not(.entro) body { overflow: hidden; }
+
+  /* ---------- Columna (formato celular) ---------- */
+  .invitacion {
+    position: relative;
+    max-width: var(--columna);
+    margin-inline: auto;
+    background:
+      radial-gradient(1px 1px at 12% 18%, rgba(207,226,241,.55), transparent 60%),
+      radial-gradient(1px 1px at 72% 34%, rgba(207,226,241,.4), transparent 60%),
+      radial-gradient(1.5px 1.5px at 38% 62%, rgba(92,225,230,.45), transparent 60%),
+      radial-gradient(1px 1px at 88% 82%, rgba(207,226,241,.5), transparent 60%),
+      radial-gradient(1px 1px at 22% 90%, rgba(207,226,241,.35), transparent 60%),
+      var(--medianoche);
+    background-size: 260px 300px, 260px 300px, 260px 300px, 260px 300px, 260px 300px, auto;
+    overflow: clip;
+  }
+  @media (min-width: 600px) {
+    body { padding: 40px 0; }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: -40px;
+      z-index: -1;
+      background: url(img/fondo-estrellas.jpg) center / cover no-repeat;
+      filter: blur(10px) brightness(.5) saturate(1.15);
+    }
+    .invitacion {
+      border-radius: 32px;
+      box-shadow: 0 40px 120px rgba(2, 6, 20, .75), 0 0 0 1px rgba(207, 226, 241, .14);
+    }
+  }
+
+  /* ---------- Escenario (portada) ---------- */
+  .escenario {
+    position: relative;
+    isolation: isolate;
+    min-height: max(92vh, 770px);
+    min-height: max(92svh, 770px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 112px var(--gutter) 0;
+    overflow: hidden;
+    background: radial-gradient(130% 70% at 50% 0%, #17306A 0%, var(--medianoche) 62%);
+    text-align: center;
+  }
+  @media (min-width: 600px) {
+    .escenario { min-height: 860px; }
+    .escenario .escenario__foto { top: 186px; width: 540px; }
+  }
+
+  .escenario__foto {
+    position: absolute;
+    z-index: -2;
+    left: 50%;
+    top: 170px;
+    width: min(122%, 590px);
+    transform: translateX(-50%);
+    pointer-events: none;
+    -webkit-mask-image:
+      linear-gradient(to bottom, transparent 0%, #000 16%, #000 86%, transparent 100%),
+      linear-gradient(to right, transparent 0%, #000 22%, #000 78%, transparent 100%);
+    -webkit-mask-composite: source-in;
+    mask-image:
+      linear-gradient(to bottom, transparent 0%, #000 16%, #000 86%, transparent 100%),
+      linear-gradient(to right, transparent 0%, #000 22%, #000 78%, transparent 100%);
+    mask-composite: intersect;
+  }
+  .escenario__foto img { width: 100%; height: auto; filter: contrast(1.08) saturate(.75); }
+  .escenario__foto::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--pista);
+    mix-blend-mode: color;
+    opacity: .6;
+  }
+
+  .escenario__reflector {
+    position: absolute;
+    z-index: -1;
+    top: -4%;
+    left: 50%;
+    width: 160%;
+    height: 92%;
+    transform: translateX(-50%);
+    background: linear-gradient(180deg, rgba(225, 240, 255, .5) 0%, rgba(92, 225, 230, .12) 70%, transparent 100%);
+    clip-path: polygon(45% 0, 55% 0, 100% 100%, 0 100%);
+    filter: blur(16px);
+    mix-blend-mode: screen;
+    opacity: .75;
+    pointer-events: none;
+  }
+
+  /* Pista de baldosas que se iluminan */
+  .pista {
+    position: absolute;
+    z-index: -3;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 36%;
+    perspective: 380px;
+    perspective-origin: 50% -30%;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 38%);
+    mask-image: linear-gradient(to bottom, transparent 0%, #000 38%);
+    touch-action: pan-y;
+  }
+  .pista__baldosas {
+    position: absolute;
+    left: -34%;
+    right: -34%;
+    bottom: 0;
+    height: 210%;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    gap: 5px;
+    transform-origin: 50% 100%;
+    transform: rotateX(64deg);
+  }
+  .baldosa {
+    border-radius: 4px;
+    background: rgba(47, 100, 200, .16);
+    box-shadow: inset 0 0 0 1px rgba(207, 226, 241, .12);
+    transition: background-color 1.1s ease, box-shadow 1.1s ease;
+  }
+  .baldosa.on {
+    background-color: var(--c, #EAF6FF);
+    box-shadow: 0 0 26px 6px var(--c, #EAF6FF), inset 0 0 0 1px rgba(255, 255, 255, .8);
+    transition-duration: .06s;
+  }
+
+  .cartel { position: relative; pointer-events: none; }
+  .nombre {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(2.6rem, 14.2vw, 4.25rem);
+    line-height: .95;
+    letter-spacing: -.01em;
+    text-transform: uppercase;
+    color: var(--blanco);
+    background-image:
+      linear-gradient(105deg, transparent 44%, rgba(255, 255, 255, .95) 50%, transparent 56%),
+      var(--cromo);
+    background-size: 300% 100%, 100% 100%;
+    background-position: 100% 0, 0 0;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, .35);
+    filter: drop-shadow(0 3px 0 #0E2156) drop-shadow(0 10px 24px rgba(8, 18, 46, .9));
+  }
+  .firma {
+    margin: -.12em 0 0;
+    font-family: var(--font-firma);
+    font-size: clamp(2.4rem, 12vw, 3.4rem);
+    line-height: 1;
+    color: var(--turquesa);
+    transform: rotate(-7deg);
+    text-shadow:
+      0 0 4px rgba(255, 255, 255, .7),
+      0 0 14px rgba(92, 225, 230, .85),
+      0 0 34px rgba(92, 225, 230, .55),
+      0 0 60px rgba(47, 100, 200, .7);
+  }
+
+  /* Globo del 6: se puede tocar y lanza confeti */
+  .escenario__globo {
+    position: absolute;
+    z-index: 3;
+    left: 1%;
+    bottom: 7%;
+    width: 31%;
+    max-width: 150px;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .escenario__globo img {
+    width: 100%;
+    height: auto;
+    transform: rotate(-9deg);
+    filter: drop-shadow(0 18px 22px rgba(2, 6, 20, .65));
+  }
+  .escenario__globo:focus-visible { outline-offset: 0; border-radius: 24px; }
+  .escenario__globo.salta img { animation: salto .7s cubic-bezier(.3, 1.6, .5, 1); }
+  @keyframes salto {
+    0% { transform: rotate(-9deg) scale(1); }
+    30% { transform: rotate(-2deg) scale(1.14, .9); }
+    60% { transform: rotate(-14deg) scale(.95, 1.08) translateY(-14px); }
+    100% { transform: rotate(-9deg) scale(1); }
+  }
+
+  .escenario__estrella { position: absolute; z-index: 1; height: auto; pointer-events: none; }
+  .escenario__estrella--a { top: 42px; left: 6%; width: 40px; --giro: -14deg; }
+  .escenario__estrella--b { top: 232px; right: 5%; width: 50px; --giro: 12deg; }
+  .entro .escenario__estrella { animation: destello 3.6s ease-in-out infinite; }
+  .entro .escenario__estrella--b { animation-delay: 1.4s; }
+  .escenario__estrella { transform: rotate(var(--giro)); }
+  @keyframes destello {
+    0%, 100% { transform: rotate(var(--giro)) scale(1); filter: brightness(1); }
+    50% { transform: rotate(calc(var(--giro) + 10deg)) scale(1.14); filter: brightness(1.35); }
+  }
+
+  /* Bola disco colgando y sus reflejos */
+  .bola {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 9%;
+    width: 78px;
+    padding-top: 30px;
+    transform-origin: 50% 0;
+    pointer-events: none;
+  }
+  .bola::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 34px;
+    translate: -50% 0;
+    background: linear-gradient(#CFE2F1, #8FA3C4);
+  }
+  .bola img { width: 100%; height: auto; filter: drop-shadow(0 8px 18px rgba(92, 225, 230, .35)); }
+  .entro .bola { animation: columpio 5s ease-in-out infinite; }
+  @keyframes columpio { 0%, 100% { transform: rotate(-4deg); } 50% { transform: rotate(4deg); } }
+
+  .reflejos {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    mix-blend-mode: screen;
+  }
+  .reflejos__giro {
+    position: absolute;
+    top: 70px;
+    right: calc(9% + 39px);
+    width: 0;
+    height: 0;
+  }
+  .reflejo {
+    position: absolute;
+    width: var(--t, 10px);
+    height: var(--t, 10px);
+    margin: calc(var(--t, 10px) / -2);
+    border-radius: 50%;
+    background: radial-gradient(circle, #fff 0 25%, var(--c, #CFE2F1) 45%, transparent 70%);
+    opacity: 0;
+    transition: opacity 1.2s ease 1.2s;
+  }
+  .entro .reflejo { opacity: var(--o, .6); }
+  .entro .reflejos__giro { animation: giroReflejos 46s linear infinite; }
+  @keyframes giroReflejos { to { transform: rotate(360deg); } }
+
+  /* Borde del escenario con focos de marquesina */
+  .marquesina {
+    position: relative;
+    height: 26px;
+    background:
+      radial-gradient(circle at 11px 13px, #FFF6D8 0 3px, rgba(255, 236, 170, .55) 4px, transparent 7px) 0 0 / 22px 26px repeat-x,
+      linear-gradient(180deg, #1C3270, #0B1838);
+    box-shadow: 0 -1px 0 rgba(207, 226, 241, .25), 0 1px 0 rgba(207, 226, 241, .12);
+  }
+  .marquesina::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 11px 13px, #0B1838 0 4.5px, transparent 5px) 0 0 / 44px 26px repeat-x;
+    opacity: .8;
+  }
+  .entro .marquesina::after { animation: persecucion 1.1s steps(1) infinite; }
+  @keyframes persecucion { 0% { background-position: 0 0; } 50% { background-position: 22px 0; } }
+
+  .escenario__pista-ayuda {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    bottom: 14px;
+    margin: 0;
+    font-size: .8125rem;
+    color: rgba(207, 226, 241, .7);
+    pointer-events: none;
+  }
+
+  /* Estado apagado (antes de entrar) y encendido (después) */
+  .js .escenario__reflector { opacity: 0; transition: opacity .8s ease .2s; }
+  .js .escenario__foto { filter: brightness(.28); transition: filter 1.4s ease .4s; }
+  .js .firma { color: #24506A; text-shadow: none; transition: color .2s ease 1.1s, text-shadow .2s ease 1.1s; }
+  .js .escenario__globo { opacity: 0; translate: 0 60px; transition: opacity .9s ease .9s, translate 1.2s cubic-bezier(.2, .8, .2, 1) .9s; }
+
+  .entro .escenario__reflector { opacity: .75; animation: parpadeo .7s steps(1) .2s; }
+  .entro .escenario__foto { filter: none; }
+  .entro .firma {
+    color: var(--turquesa);
+    text-shadow:
+      0 0 4px rgba(255, 255, 255, .7),
+      0 0 14px rgba(92, 225, 230, .85),
+      0 0 34px rgba(92, 225, 230, .55),
+      0 0 60px rgba(47, 100, 200, .7);
+    animation: neon 1.2s steps(1) 1.1s;
+  }
+  .entro .escenario__globo { opacity: 1; translate: 0 0; }
+  .entro .escenario__globo.flota { animation: flotar 6s ease-in-out infinite; }
+  .entro .nombre { animation: brillo 1.6s ease-out .7s both; }
+
+  @keyframes parpadeo { 0% { opacity: .2 } 20% { opacity: .75 } 35% { opacity: .1 } 55% { opacity: .75 } }
+  @keyframes neon { 0% { opacity: 1 } 15% { opacity: .35 } 30% { opacity: 1 } 45% { opacity: .5 } 60% { opacity: 1 } }
+  @keyframes brillo { from { background-position: 100% 0, 0 0; } to { background-position: 0% 0, 0 0; } }
+  @keyframes flotar { 0%, 100% { translate: 0 0; } 50% { translate: 0 -10px; } }
+
+  /* ---------- Telón (entrada) ---------- */
+  .telon { display: none; }
+  .js .telon {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background: radial-gradient(90% 60% at 50% 40%, rgba(19, 48, 110, .78), rgba(8, 18, 46, .94));
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    text-align: center;
+    transition: opacity .6s ease, visibility 0s linear .6s;
+  }
+  .js .telon.fuera { opacity: 0; visibility: hidden; }
+  .telon__caja { max-width: 340px; }
+  .telon__disco {
+    width: 132px;
+    height: 132px;
+    margin: 0 auto 26px;
+    border-radius: 50%;
+    background:
+      radial-gradient(circle, var(--turquesa) 0 18%, #0B1430 18.5% 20%, transparent 20.5%),
+      repeating-radial-gradient(circle, #0A1022 0 2px, #16203E 2.5px 4px),
+      #0A1022;
+    box-shadow: 0 0 0 2px rgba(207, 226, 241, .2), 0 20px 50px rgba(0, 0, 0, .6), inset 0 0 0 10px #0A1022;
+    position: relative;
+  }
+  .telon__disco::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: conic-gradient(from 40deg, transparent 0 12%, rgba(255, 255, 255, .22) 16%, transparent 22% 62%, rgba(255, 255, 255, .14) 66%, transparent 72%);
+  }
+  .telon__titulo {
+    margin: 0 0 10px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.55rem;
+    line-height: 1.2;
+    color: var(--blanco);
+    text-wrap: balance;
+  }
+  .telon__texto { margin: 0 0 26px; color: var(--hielo); }
+  .telon__otra {
+    margin-top: 14px;
+    background: none;
+    border: 0;
+    padding: 8px 12px;
+    color: var(--hielo);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    cursor: pointer;
+  }
+
+  /* ---------- Botones ---------- */
+  .boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 52px;
+    padding: 14px 26px;
+    border: 0;
+    border-radius: 999px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: .9rem;
+    letter-spacing: .01em;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .boton:active { transform: translateY(1px) scale(.98); }
+  .boton--cromo {
+    color: var(--medianoche);
+    background: var(--cromo-claro);
+    box-shadow: inset 0 1px 0 #fff, inset 0 -2px 0 rgba(19, 48, 110, .25), 0 10px 28px rgba(92, 225, 230, .25);
+  }
+  .boton--linea {
+    color: var(--blanco);
+    background: rgba(207, 226, 241, .06);
+    box-shadow: inset 0 0 0 1.5px rgba(207, 226, 241, .45);
+  }
+  .boton--linea:hover { box-shadow: inset 0 0 0 1.5px var(--turquesa); }
+  .boton svg { width: 20px; height: 20px; flex: none; }
+  .botones { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+
+  /* ---------- Secciones ---------- */
+  .seccion { padding: 72px var(--gutter); text-align: center; }
+  .titulo {
+    margin: 0 0 14px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(1.4rem, 6vw, 1.7rem);
+    line-height: 1.2;
+    color: var(--blanco);
+    text-wrap: balance;
+  }
+  .seccion p { margin: 0 auto; max-width: 34ch; }
+
+  .bienvenida { padding-top: 56px; padding-bottom: 40px; }
+  .bienvenida__lead {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(1.25rem, 5.4vw, 1.5rem);
+    line-height: 1.35;
+    color: var(--blanco);
+    text-wrap: balance;
+  }
+  .seccion .bienvenida__lead { max-width: 20ch; }
+  .bienvenida__texto { margin-top: 18px !important; font-size: 1.125rem; }
+
+  /* Boleto de concierto con la fecha */
+  .boleto {
+    --muesca: 15px;
+    --corte: 128px;
+    position: relative;
+    margin: 36px auto 0;
+    max-width: 380px;
+    color: var(--medianoche);
+    background: var(--cromo-claro);
+    border-radius: 20px;
+    -webkit-mask:
+      radial-gradient(circle var(--muesca) at 0 calc(100% - var(--corte)), #0000 98%, #000) left / 51% 100% no-repeat,
+      radial-gradient(circle var(--muesca) at 100% calc(100% - var(--corte)), #0000 98%, #000) right / 51% 100% no-repeat;
+    mask:
+      radial-gradient(circle var(--muesca) at 0 calc(100% - var(--corte)), #0000 98%, #000) left / 51% 100% no-repeat,
+      radial-gradient(circle var(--muesca) at 100% calc(100% - var(--corte)), #0000 98%, #000) right / 51% 100% no-repeat;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, .45);
+    text-align: left;
+  }
+  .boleto__cuerpo {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 6px 18px;
+    padding: 26px 26px 24px;
+  }
+  .boleto__num {
+    grid-row: span 3;
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 5.6rem;
+    line-height: .85;
+    letter-spacing: -.04em;
+    color: var(--pista);
+    background: linear-gradient(180deg, #2F64C8 0%, #13306E 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .boleto__dia, .boleto__mes, .boleto__hora { margin: 0; }
+  .boleto__dia { font-weight: 600; font-size: 1.05rem; color: #34507F; }
+  .boleto__mes { font-family: var(--font-display); font-weight: 800; font-size: 1.3rem; line-height: 1.1; color: var(--escenario); }
+  .boleto__hora { font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; color: var(--pista); }
+  .boleto__talon {
+    height: var(--corte);
+    padding: 20px 22px 22px;
+    border-top: 2px dashed rgba(19, 48, 110, .3);
+    margin-inline: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  .boleto__faltan { margin: 0; font-weight: 600; font-size: .95rem; color: #34507F; }
+  .cuenta { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 0; }
+  .cuenta div { display: flex; flex-direction: column; align-items: flex-start; }
+  .cuenta dt { order: 2; font-size: .78rem; color: #4A6593; }
+  .cuenta dd {
+    order: 1;
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.55rem;
+    line-height: 1.1;
+    color: var(--escenario);
+    font-variant-numeric: tabular-nums;
+  }
+  .boleto__fin {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--escenario);
+  }
+
+  /* Ubicación */
+  .lugar__nombre {
+    margin: 4px auto 6px !important;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(1.5rem, 7vw, 1.9rem);
+    line-height: 1.15;
+    color: var(--turquesa);
+  }
+  .lugar__direccion { color: var(--hielo); }
+  .mapa {
+    position: relative;
+    margin: 28px 0 22px;
+    border-radius: 18px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background: var(--escenario);
+    box-shadow: 0 0 0 1px rgba(207, 226, 241, .18), 0 20px 50px rgba(0, 0, 0, .4);
+  }
+  .mapa iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    filter: invert(.9) hue-rotate(185deg) saturate(.75) brightness(.95) contrast(.95);
+  }
+  .mapa::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--pista);
+    mix-blend-mode: color;
+    opacity: .45;
+    pointer-events: none;
+  }
+
+  /* Antes de venir: stickers */
+  .avisos__titulo {
+    margin: 0 auto;
+    max-width: 16ch;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(1.45rem, 6.6vw, 1.85rem);
+    line-height: 1.22;
+    color: var(--turquesa);
+    text-wrap: balance;
+  }
+  .stickers { display: grid; gap: 22px; margin: 36px auto 0; max-width: 380px; list-style: none; padding: 0; }
+  .sticker {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding: 18px 20px;
+    border: 4px solid #fff;
+    border-radius: 18px;
+    color: var(--medianoche);
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: left;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, .4);
+  }
+  .sticker svg { width: 46px; height: 46px; flex: none; }
+  .sticker strong { display: block; font-family: var(--font-display); font-weight: 800; font-size: 1.05rem; line-height: 1.25; }
+  .sticker--agua { background: var(--turquesa); transform: rotate(-2.5deg); }
+  .sticker--peques { background: var(--cromo-claro); transform: rotate(1.8deg); font-weight: 500; }
+
+  /* Mesa de regalos */
+  .regalos__tienda { color: var(--hielo); }
+  .regalos__numero {
+    display: block;
+    margin: 18px 0 24px;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(1.9rem, 9vw, 2.4rem);
+    letter-spacing: .06em;
+    color: var(--blanco);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Confirmación */
+  .confirmar { padding-bottom: 56px; }
+  .formulario {
+    margin: 32px auto 0;
+    max-width: 400px;
+    padding: 26px 22px 24px;
+    border-radius: 22px;
+    text-align: left;
+    background: linear-gradient(180deg, rgba(47, 100, 200, .22), rgba(19, 48, 110, .35));
+    box-shadow: inset 0 0 0 1px rgba(207, 226, 241, .18);
+  }
+  .campo { margin: 0 0 22px; padding: 0; border: 0; min-width: 0; }
+  .campo > label, .campo > legend {
+    display: block;
+    margin-bottom: 8px;
+    padding: 0;
+    font-weight: 600;
+    color: var(--blanco);
+  }
+  .entrada {
+    width: 100%;
+    min-height: 52px;
+    padding: 12px 16px;
+    border: 0;
+    border-radius: 14px;
+    background: rgba(8, 18, 46, .7);
+    box-shadow: inset 0 0 0 1.5px rgba(207, 226, 241, .3);
+    color: var(--blanco);
+    font-size: 1.0625rem;
+  }
+  .entrada::placeholder { color: rgba(207, 226, 241, .5); }
+  .entrada:focus-visible { outline: none; box-shadow: inset 0 0 0 2px var(--turquesa); }
+  .entrada[aria-invalid="true"] { box-shadow: inset 0 0 0 2px #FF8FA3; }
+  .campo__error { margin: 8px 0 0; color: #FFB3C1; font-size: .9375rem; }
+
+  .opciones { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .opcion input { position: absolute; opacity: 0; pointer-events: none; }
+  .opcion span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 10px 12px;
+    border-radius: 14px;
+    text-align: center;
+    line-height: 1.25;
+    font-weight: 600;
+    background: rgba(8, 18, 46, .55);
+    box-shadow: inset 0 0 0 1.5px rgba(207, 226, 241, .3);
+    cursor: pointer;
+    transition: background-color .15s ease, color .15s ease;
+  }
+  .opcion input:checked + span { background: var(--turquesa); color: var(--medianoche); box-shadow: none; }
+  .opcion input:focus-visible + span { outline: 3px solid var(--turquesa); outline-offset: 3px; }
+
+  .contador {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 8px 0;
+  }
+  .contador + .contador { border-top: 1px solid rgba(207, 226, 241, .14); }
+  .contador__nombre { font-weight: 600; }
+  .contador__nombre small { display: block; font-weight: 400; font-size: .875rem; color: rgba(207, 226, 241, .75); }
+  .contador__ctrl { display: flex; align-items: center; gap: 6px; }
+  .contador__ctrl button {
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(207, 226, 241, .12);
+    box-shadow: inset 0 0 0 1.5px rgba(207, 226, 241, .35);
+    font-size: 1.35rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+  .contador__ctrl button:disabled { opacity: .35; cursor: not-allowed; }
+  .contador__ctrl output {
+    min-width: 2ch;
+    text-align: center;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.3rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .formulario .boton { width: 100%; margin-top: 4px; }
+  .formulario__nota { margin: 14px 0 0; font-size: .9rem; color: rgba(207, 226, 241, .8); text-align: center; }
+  .formulario__nota a { color: var(--turquesa); }
+
+  /* Cierre */
+  .cierre { position: relative; padding: 64px var(--gutter) 120px; }
+  .cierre__frase {
+    margin: 0 auto;
+    max-width: 14ch;
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(1.9rem, 9vw, 2.5rem);
+    line-height: 1.08;
+    text-transform: uppercase;
+    background: var(--cromo);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 3px 0 #0E2156);
+  }
+  .cierre__estrellas { display: flex; justify-content: center; gap: 18px; margin-top: 26px; }
+  .cierre__estrellas img { width: 40px; height: auto; }
+  .cierre__estrellas img:nth-child(2) { width: 54px; translate: 0 -8px; }
+
+  /* ---------- Control de música ---------- */
+  .musica {
+    position: fixed;
+    z-index: 40;
+    right: max(14px, calc((100vw - var(--columna)) / 2 + 14px));
+    bottom: max(14px, env(safe-area-inset-bottom));
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 52px;
+    padding: 6px 16px 6px 6px;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(8, 18, 46, .82);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: inset 0 0 0 1px rgba(207, 226, 241, .25), 0 10px 30px rgba(0, 0, 0, .45);
+    text-align: left;
+    cursor: pointer;
+  }
+  .musica[hidden] { display: none; }
+  .musica__disco {
+    width: 40px;
+    height: 40px;
+    flex: none;
+    border-radius: 50%;
+    background:
+      radial-gradient(circle, var(--turquesa) 0 22%, #0B1430 23% 26%, transparent 27%),
+      repeating-radial-gradient(circle, #0A1022 0 1.5px, #1B2748 2px 3px);
+    box-shadow: 0 0 0 1px rgba(207, 226, 241, .25);
+  }
+  .musica.sonando .musica__disco { animation: girar 1.8s linear infinite; }
+  .musica__texto { display: flex; flex-direction: column; line-height: 1.2; }
+  .musica__titulo { font-family: var(--font-display); font-weight: 700; font-size: .8rem; color: var(--blanco); }
+  .musica__estado { font-size: .78rem; color: rgba(207, 226, 241, .8); }
+  @keyframes girar { to { transform: rotate(360deg); } }
+
+  /* Reproductor de YouTube (solo audio, fuera de vista) */
+  .yt { position: fixed; left: 0; bottom: 0; width: 200px; height: 200px; opacity: 0; pointer-events: none; z-index: -1; transform: translateX(-400px); }
+
+  /* Aviso flotante */
+  .aviso {
+    position: fixed;
+    z-index: 60;
+    left: 50%;
+    bottom: 84px;
+    translate: -50% 20px;
+    padding: 12px 18px;
+    border-radius: 999px;
+    background: var(--turquesa);
+    color: var(--medianoche);
+    font-weight: 600;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s ease, translate .25s ease;
+  }
+  .aviso.visible { opacity: 1; translate: -50% 0; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: .01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: .01ms !important;
+      transition-delay: 0s !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="telon" id="telon" role="dialog" aria-modal="true" aria-labelledby="telon-titulo" aria-describedby="telon-texto">
+  <div class="telon__caja">
+    <div class="telon__disco" aria-hidden="true"></div>
+    <h2 class="telon__titulo" id="telon-titulo">Esteban te invita a su fiesta</h2>
+    <p class="telon__texto" id="telon-texto">Sube el volumen: esta invitación trae música.</p>
+    <button class="boton boton--cromo" type="button" id="entrar-musica">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5Z"/></svg>
+      Entrar con música
+    </button>
+    <br>
+    <button class="telon__otra" type="button" id="entrar-silencio">Entrar sin sonido</button>
+  </div>
+</div>
+
+<main class="invitacion" id="invitacion">
+
+  <header class="escenario" id="escenario">
+    <div class="pista" id="pista" aria-hidden="true"><div class="pista__baldosas" id="baldosas"></div></div>
+    <div class="escenario__foto">
+      <img src="img/bailarin.jpg" width="1000" height="1137" alt="Bailarín al estilo de Michael Jackson con sombrero y chaqueta de lentejuelas, bajo un reflector">
+    </div>
+    <div class="escenario__reflector" aria-hidden="true"></div>
+    <div class="reflejos" aria-hidden="true"><div class="reflejos__giro" id="reflejos"></div></div>
+
+    <div class="bola" aria-hidden="true"><img src="img/bola-disco.svg" alt="" width="400" height="400"></div>
+    <img class="escenario__estrella escenario__estrella--a" src="img/estrella-glitter.png" alt="" width="180" height="172">
+    <img class="escenario__estrella escenario__estrella--b" src="img/estrella-plata.png" alt="" width="200" height="190">
+
+    <div class="cartel">
+      <h1 class="nombre">Esteban</h1>
+      <p class="firma">Rey del Pop</p>
+    </div>
+
+    <button class="escenario__globo" id="globo" type="button" aria-label="Globo del 6: tócalo para lanzar confeti">
+      <img src="img/globo-6.png" width="420" height="565" alt="">
+    </button>
+    <p class="escenario__pista-ayuda" aria-hidden="true">Toca la pista y se ilumina</p>
+  </header>
+  <div class="marquesina" aria-hidden="true"></div>
+
+  <section class="seccion bienvenida" aria-labelledby="fecha-titulo">
+    <p class="bienvenida__lead">Esteban cumple 6 años y se convierte en el rey del pop.</p>
+    <p class="bienvenida__texto">Queremos celebrar este día tan especial y nos encantaría que nos acompañaras a festejar.</p>
+
+    <h2 class="sr-only" id="fecha-titulo">Fecha y hora</h2>
+    <article class="boleto">
+      <div class="boleto__cuerpo">
+        <span class="boleto__num" aria-hidden="true">21</span>
+        <p class="boleto__dia">Sábado</p>
+        <p class="boleto__mes"><span class="sr-only">21 de </span>noviembre</p>
+        <p class="boleto__hora">11:30 a. m.</p>
+      </div>
+      <div class="boleto__talon" id="talon" role="timer" aria-label="Cuenta regresiva para la fiesta">
+        <p class="boleto__faltan">Faltan</p>
+        <dl class="cuenta">
+          <div><dt id="u-dias">días</dt><dd id="c-dias">--</dd></div>
+          <div><dt id="u-horas">horas</dt><dd id="c-horas">--</dd></div>
+          <div><dt id="u-min">min</dt><dd id="c-min">--</dd></div>
+          <div><dt id="u-seg">seg</dt><dd id="c-seg">--</dd></div>
+        </dl>
+      </div>
+    </article>
+  </section>
+
+  <section class="seccion lugar" aria-labelledby="lugar-titulo">
+    <h2 class="titulo" id="lugar-titulo">Ubicación</h2>
+    <p class="lugar__nombre">Salón Lumaydani</p>
+    <p class="lugar__direccion">Av. Palma Camedor 104, Las Palmas,<br>29040 Tuxtla Gutiérrez, Chis.</p>
+    <div class="mapa">
+      <iframe id="mapa" title="Mapa del Salón Lumaydani" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="botones">
+      <a class="boton boton--cromo" id="link-maps" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 6.2 12.1 6.5 12.4a.7.7 0 0 0 1 0C12.8 21.1 19 14.2 19 9a7 7 0 0 0-7-7Zm0 9.6A2.6 2.6 0 1 1 12 6.4a2.6 2.6 0 0 1 0 5.2Z"/></svg>
+        Abrir en Google Maps
+      </a>
+      <a class="boton boton--linea" id="link-waze" target="_blank" rel="noopener">Abrir en Waze</a>
+    </div>
+  </section>
+
+  <section class="seccion avisos" aria-labelledby="avisos-titulo">
+    <h2 class="avisos__titulo" id="avisos-titulo">¡Prepárate para divertirte, jugar y pasarla increíble!</h2>
+    <ul class="stickers">
+      <li class="sticker sticker--agua">
+        <svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"><path d="M4 16c4 0 4-4 8-4s4 4 8 4 4-4 8-4 4 4 8 4 4-4 8-4"/><path d="M4 26c4 0 4-4 8-4s4 4 8 4 4-4 8-4 4 4 8 4 4-4 8-4"/><path d="M4 36c4 0 4-4 8-4s4 4 8 4 4-4 8-4 4 4 8 4 4-4 8-4"/></svg>
+        <span><strong>¡No olvides traer tu traje de baño!</strong></span>
+      </li>
+      <li class="sticker sticker--peques">
+        <svg viewBox="0 0 48 48" aria-hidden="true" fill="currentColor"><circle cx="17" cy="9" r="5.5"/><path d="M9 44V27a8 8 0 0 1 16 0v17h-5V32h-6v12Z"/><circle cx="34.5" cy="21" r="4.5"/><path d="M28.5 44V35a6 6 0 0 1 12 0v9h-4v-7h-4v7Z"/><path d="M25 30.5h4" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+        <span>Cada peque deberá entrar acompañado de mamá o papá, para disfrutar de la diversión con mayor seguridad.</span>
+      </li>
+    </ul>
+  </section>
+
+  <section class="seccion regalos" aria-labelledby="regalos-titulo">
+    <h2 class="titulo" id="regalos-titulo">Mesa de regalos</h2>
+    <p class="regalos__tienda">Si quieres hacerle un regalo a Esteban, su mesa está en Liverpool.</p>
+    <span class="regalos__numero" id="numero-mesa" aria-label="Número de mesa: 6 0 0 6 5 4 4 7">60065447</span>
+    <div class="botones">
+      <button class="boton boton--linea" type="button" id="copiar-mesa">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2.5"/><path d="M16 8V6.5A2.5 2.5 0 0 0 13.5 4h-7A2.5 2.5 0 0 0 4 6.5v7A2.5 2.5 0 0 0 6.5 16H8"/></svg>
+        <span>Copiar número</span>
+      </button>
+      <a class="boton boton--cromo" href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/60065447" target="_blank" rel="noopener">Ver la mesa en Liverpool</a>
+    </div>
+  </section>
+
+  <section class="seccion confirmar" aria-labelledby="confirmar-titulo">
+    <h2 class="titulo" id="confirmar-titulo">¿Nos acompañas?</h2>
+    <p>Confirma tu asistencia por WhatsApp.</p>
+
+    <form class="formulario" id="formulario" novalidate>
+      <div class="campo">
+        <label for="nombre">Tu nombre o el de tu familia</label>
+        <input class="entrada" id="nombre" name="nombre" type="text" autocomplete="name" placeholder="Ej. Familia López" aria-describedby="error-nombre" required>
+        <p class="campo__error" id="error-nombre" hidden>Escribe tu nombre para que sepamos quién confirma.</p>
+      </div>
+
+      <fieldset class="campo">
+        <legend>¿Vienen a la fiesta?</legend>
+        <div class="opciones">
+          <label class="opcion"><input type="radio" name="asiste" value="si" checked><span>Sí, ahí estaremos</span></label>
+          <label class="opcion"><input type="radio" name="asiste" value="no"><span>No podremos ir</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="campo" id="cuantos">
+        <legend>¿Cuántos vienen?</legend>
+        <div class="contador">
+          <span class="contador__nombre" id="lbl-adultos">Adultos<small>Mamá, papá o quien acompañe</small></span>
+          <span class="contador__ctrl">
+            <button type="button" data-campo="adultos" data-paso="-1" aria-label="Quitar un adulto">−</button>
+            <output id="adultos" aria-labelledby="lbl-adultos" aria-live="polite">1</output>
+            <button type="button" data-campo="adultos" data-paso="1" aria-label="Agregar un adulto">+</button>
+          </span>
+        </div>
+        <div class="contador">
+          <span class="contador__nombre" id="lbl-ninos">Peques</span>
+          <span class="contador__ctrl">
+            <button type="button" data-campo="ninos" data-paso="-1" aria-label="Quitar un peque">−</button>
+            <output id="ninos" aria-labelledby="lbl-ninos" aria-live="polite">1</output>
+            <button type="button" data-campo="ninos" data-paso="1" aria-label="Agregar un peque">+</button>
+          </span>
+        </div>
+      </fieldset>
+
+      <button class="boton boton--cromo" type="submit" id="enviar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg>
+        <span id="enviar-texto">Confirmar por WhatsApp</span>
+      </button>
+      <p class="formulario__nota" id="nota-form">Se abrirá WhatsApp con tu mensaje listo para enviar.</p>
+    </form>
+  </section>
+
+  <footer class="seccion cierre">
+    <p class="cierre__frase">¡Te esperamos en la pista!</p>
+    <div class="cierre__estrellas" aria-hidden="true">
+      <img src="img/estrella-glitter.png" alt="" width="180" height="172">
+      <img src="img/estrella-plata.png" alt="" width="200" height="190">
+      <img src="img/estrella-glitter.png" alt="" width="180" height="172">
+    </div>
+  </footer>
+</main>
+
+<button class="musica" id="musica" type="button" aria-pressed="false" hidden>
+  <span class="musica__disco" aria-hidden="true"></span>
+  <span class="musica__texto">
+    <span class="musica__titulo">Billie Jean</span>
+    <span class="musica__estado" id="musica-estado">Toca para escuchar</span>
+  </span>
+</button>
+<div class="yt" aria-hidden="true"><div id="yt"></div></div>
+<div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.js" integrity="sha384-/Ko/tqVwPYurnBe+Mj8WWw+39WmyOZn/kU+neqXn4hRxGI575k07mB/hIekAT51+" crossorigin="anonymous" defer></script>
+<script>
+(() => {
+  'use strict';
+
+  // ---------- Datos de la fiesta ----------
+  const EVENTO = new Date('2026-11-21T11:30:00-06:00'); // Tuxtla Gutiérrez (UTC-6)
+  const WHATSAPP = '529613180773';
+  // Las versiones oficiales de Billie Jean no se dejan reproducir dentro de otras páginas
+  // (error 150 de YouTube). Esta versión instrumental sí; si falla, se abre el video oficial.
+  const VIDEO_ID = 'Cru2vXuz7ck';
+  const VIDEO_OFICIAL = 'Zi_XLOBDo_Y';
+  const MESA = '60065447';
+  const LUGAR = 'Salón Lumaydani, Av. Palma Camedor 104, Las Palmas, 29040 Tuxtla Gutiérrez, Chis.';
+  const DIRECCION = 'Av. Palma Camedor 104, Las Palmas, 29040 Tuxtla Gutiérrez, Chiapas';
+
+  const raiz = document.documentElement;
+  const main = document.getElementById('invitacion');
+  const sinMovimiento = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const $ = (id) => document.getElementById(id);
+
+  // ---------- Aviso flotante ----------
+  let avisoTimer;
+  function avisar(texto) {
+    const el = $('aviso');
+    el.textContent = texto;
+    el.classList.add('visible');
+    clearTimeout(avisoTimer);
+    avisoTimer = setTimeout(() => el.classList.remove('visible'), 2400);
+  }
+
+  // ---------- Confeti (canvas-confetti) ----------
+  const COLORES_CONFETI = ['#5CE1E6', '#CFE2F1', '#FFFFFF', '#2F64C8', '#9CC7FF'];
+  function festejar(opciones) {
+    if (sinMovimiento || typeof window.confetti !== 'function') return;
+    window.confetti(Object.assign({
+      particleCount: 90,
+      spread: 70,
+      startVelocity: 42,
+      ticks: 220,
+      scalar: 1,
+      colors: COLORES_CONFETI,
+      shapes: ['square', 'circle', 'star'],
+      disableForReducedMotion: true,
+      zIndex: 70,
+    }, opciones));
+  }
+  function origenDe(el) {
+    const r = el.getBoundingClientRect();
+    return { x: (r.left + r.width / 2) / innerWidth, y: (r.top + r.height / 2) / innerHeight };
+  }
+
+  // ---------- Reflejos de la bola disco ----------
+  const contReflejos = $('reflejos');
+  const TONOS = ['#FFFFFF', '#CFE2F1', '#5CE1E6', '#9CC7FF'];
+  for (let i = 0; i < 26; i++) {
+    const r = document.createElement('span');
+    r.className = 'reflejo';
+    const angulo = (i / 26) * Math.PI * 2 + (i % 3) * 0.37;
+    const distancia = 70 + ((i * 53) % 420);
+    r.style.left = Math.cos(angulo) * distancia + 'px';
+    r.style.top = Math.sin(angulo) * distancia + 'px';
+    r.style.setProperty('--t', 6 + ((i * 7) % 11) + 'px');
+    r.style.setProperty('--o', (0.35 + ((i * 13) % 40) / 100).toFixed(2));
+    r.style.setProperty('--c', TONOS[i % TONOS.length]);
+    contReflejos.append(r);
+  }
+
+  // ---------- Pista de baldosas ----------
+  const COLS = 9, FILAS = 7;
+  const COLORES = ['#F2FAFF', '#5CE1E6', '#9CC7FF', '#CFE2F1'];
+  const baldosas = [];
+  const contBaldosas = $('baldosas');
+  for (let f = 0; f < FILAS; f++) {
+    for (let c = 0; c < COLS; c++) {
+      const b = document.createElement('span');
+      b.className = 'baldosa';
+      b.dataset.f = f;
+      b.dataset.c = c;
+      contBaldosas.append(b);
+      baldosas.push(b);
+    }
+  }
+  const baldosaEn = (f, c) => (f >= 0 && f < FILAS && c >= 0 && c < COLS) ? baldosas[f * COLS + c] : null;
+
+  function encender(b, ms = 650) {
+    if (!b) return;
+    b.style.setProperty('--c', COLORES[Math.floor(Math.random() * COLORES.length)]);
+    b.classList.add('on');
+    clearTimeout(b._t);
+    b._t = setTimeout(() => b.classList.remove('on'), ms);
+  }
+
+  const pista = $('pista');
+  pista.addEventListener('pointerover', (e) => {
+    if (e.target.classList.contains('baldosa')) encender(e.target);
+  });
+  pista.addEventListener('pointerdown', (e) => {
+    const t = e.target;
+    if (!t.classList.contains('baldosa')) return;
+    const f = +t.dataset.f, c = +t.dataset.c;
+    encender(t, 900);
+    setTimeout(() => {
+      [[1, 0], [-1, 0], [0, 1], [0, -1]].forEach(([df, dc]) => encender(baldosaEn(f + df, c + dc), 700));
+    }, 90);
+  });
+
+  function ola() {
+    baldosas.forEach((b) => {
+      const f = +b.dataset.f, c = +b.dataset.c;
+      const retraso = 500 + (FILAS - 1 - f) * 110 + Math.abs(c - 4) * 70;
+      setTimeout(() => encender(b, 520), retraso);
+    });
+  }
+
+  // Pasos de moonwalk al ritmo de Billie Jean (117 bpm ≈ 513 ms)
+  let pasoTimer = null, paso = 0, escenarioVisible = true;
+  new IntersectionObserver(([e]) => { escenarioVisible = e.isIntersecting; }).observe($('escenario'));
+  function iniciarPasos() {
+    if (sinMovimiento || pasoTimer) return;
+    pasoTimer = setInterval(() => {
+      if (!escenarioVisible) return;
+      const c = COLS - 1 - (paso % COLS);
+      const f = 4 + (paso % 2);
+      encender(baldosaEn(f, c), 480);
+      paso++;
+    }, 513);
+  }
+  function detenerPasos() { clearInterval(pasoTimer); pasoTimer = null; }
+
+  // ---------- Música (YouTube, solo audio) ----------
+  const musica = (() => {
+    const boton = $('musica');
+    const estado = $('musica-estado');
+    let player = null, listo = false, quiere = false, sonando = false, fallo = false, espera;
+
+    function pintar(texto, activo) {
+      estado.textContent = texto;
+      boton.classList.toggle('sonando', !!activo);
+      boton.setAttribute('aria-pressed', activo ? 'true' : 'false');
+      boton.setAttribute('aria-label', fallo ? 'Escuchar Billie Jean en YouTube' : (activo ? 'Pausar la música' : 'Reproducir la música'));
+    }
+    function fallar() {
+      if (sonando) return;
+      fallo = true;
+      quiere = false;
+      clearTimeout(espera);
+      pintar('Escuchar en YouTube', false);
+    }
+
+    window.onYouTubeIframeAPIReady = () => {
+      player = new YT.Player('yt', {
+        width: 200,
+        height: 200,
+        videoId: VIDEO_ID,
+        playerVars: { autoplay: 0, controls: 0, loop: 1, playlist: VIDEO_ID, playsinline: 1, rel: 0, disablekb: 1 },
+        events: {
+          onReady: () => {
+            listo = true;
+            player.setVolume(85);
+            if (quiere) player.playVideo();
+          },
+          onStateChange: (e) => {
+            if (e.data === YT.PlayerState.PLAYING) {
+              sonando = true; fallo = false; clearTimeout(espera);
+              pintar('Sonando', true);
+              iniciarPasos();
+            } else if (e.data === YT.PlayerState.PAUSED || e.data === YT.PlayerState.ENDED) {
+              sonando = false;
+              pintar(quiere ? 'Cargando…' : 'En pausa', false);
+              detenerPasos();
+            }
+          },
+          onError: fallar,
+        },
+      });
+    };
+    const s = document.createElement('script');
+    s.src = 'https://www.youtube.com/iframe_api';
+    s.async = true;
+    s.onerror = fallar;
+    document.head.append(s);
+
+    function reproducir(abrirSiFalla = true) {
+      if (fallo) {
+        if (abrirSiFalla) window.open('https://www.youtube.com/watch?v=' + VIDEO_OFICIAL, '_blank', 'noopener');
+        return;
+      }
+      quiere = true;
+      pintar('Cargando…', false);
+      if (listo) player.playVideo();
+      clearTimeout(espera);
+      espera = setTimeout(() => { if (!sonando) fallar(); }, 6000);
+    }
+    function pausar() {
+      quiere = false;
+      clearTimeout(espera);
+      if (listo) player.pauseVideo();
+      sonando = false;
+      pintar('En pausa', false);
+      detenerPasos();
+    }
+    boton.addEventListener('click', () => (sonando ? pausar() : reproducir()));
+    return { reproducir, mostrar: () => { boton.hidden = false; } };
+  })();
+
+  // ---------- Telón de entrada ----------
+  const telon = $('telon');
+  main.inert = true;
+  $('entrar-musica').focus({ preventScroll: true });
+
+  function entrar(conMusica) {
+    if (raiz.classList.contains('entro')) return;
+    if (conMusica) musica.reproducir(false);
+    raiz.classList.add('entro');
+    telon.classList.add('fuera');
+    main.inert = false;
+    musica.mostrar();
+    setTimeout(() => { telon.hidden = true; }, 650);
+    if (!sinMovimiento) {
+      ola();
+      setTimeout(() => $('globo').classList.add('flota'), 2200);
+      // Cañones de confeti a los lados del escenario
+      setTimeout(() => {
+        festejar({ particleCount: 70, angle: 60, spread: 55, origin: { x: 0, y: 0.75 } });
+        festejar({ particleCount: 70, angle: 120, spread: 55, origin: { x: 1, y: 0.75 } });
+      }, 1300);
+    }
+    $('escenario').querySelector('h1').setAttribute('tabindex', '-1');
+    $('escenario').querySelector('h1').focus({ preventScroll: true });
+  }
+  $('entrar-musica').addEventListener('click', () => entrar(true));
+  $('entrar-silencio').addEventListener('click', () => entrar(false));
+  telon.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') entrar(false);
+    if (e.key === 'Tab') {
+      const a = $('entrar-musica'), b = $('entrar-silencio');
+      if (e.shiftKey && document.activeElement === a) { e.preventDefault(); b.focus(); }
+      else if (!e.shiftKey && document.activeElement === b) { e.preventDefault(); a.focus(); }
+    }
+  });
+
+  // ---------- Globo del 6 ----------
+  const globo = $('globo');
+  globo.addEventListener('click', () => {
+    globo.classList.remove('salta');
+    void globo.offsetWidth; // reinicia la animación
+    globo.classList.add('salta');
+    festejar({ particleCount: 80, spread: 90, startVelocity: 34, origin: origenDe(globo) });
+  });
+
+  // ---------- Cuenta regresiva ----------
+  const dos = (n) => String(n).padStart(2, '0');
+  let cuentaTimer;
+  function cuenta() {
+    const ms = EVENTO - Date.now();
+    if (ms <= 0) {
+      clearInterval(cuentaTimer);
+      const yaPaso = ms < -6 * 3600e3;
+      $('talon').innerHTML = '<p class="boleto__fin">' + (yaPaso ? '¡Gracias por celebrar con Esteban!' : '¡Es hoy! Nos vemos en la pista.') + '</p>';
+      return;
+    }
+    const d = Math.floor(ms / 864e5);
+    const h = Math.floor(ms / 36e5) % 24;
+    const m = Math.floor(ms / 6e4) % 60;
+    const s = Math.floor(ms / 1e3) % 60;
+    $('c-dias').textContent = d;
+    $('c-horas').textContent = dos(h);
+    $('c-min').textContent = dos(m);
+    $('c-seg').textContent = dos(s);
+    $('u-dias').textContent = d === 1 ? 'día' : 'días';
+    $('u-horas').textContent = h === 1 ? 'hora' : 'horas';
+  }
+  cuenta();
+  cuentaTimer = setInterval(cuenta, 1000);
+
+  // ---------- Ubicación ----------
+  $('mapa').src = 'https://maps.google.com/maps?q=' + encodeURIComponent(LUGAR) + '&z=16&output=embed';
+  $('link-maps').href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(LUGAR);
+  $('link-waze').href = 'https://waze.com/ul?q=' + encodeURIComponent(DIRECCION) + '&navigate=yes';
+
+  // ---------- Mesa de regalos ----------
+  async function copiar(texto) {
+    try {
+      await navigator.clipboard.writeText(texto);
+      return true;
+    } catch {
+      const ta = document.createElement('textarea');
+      ta.value = texto;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.append(ta);
+      ta.select();
+      let ok = false;
+      try { ok = document.execCommand('copy'); } catch { ok = false; }
+      ta.remove();
+      return ok;
+    }
+  }
+  $('copiar-mesa').addEventListener('click', async () => {
+    const ok = await copiar(MESA);
+    const etiqueta = $('copiar-mesa').querySelector('span');
+    if (ok) {
+      etiqueta.textContent = 'Número copiado';
+      avisar('Número de mesa copiado: ' + MESA);
+      setTimeout(() => { etiqueta.textContent = 'Copiar número'; }, 2400);
+    } else {
+      avisar('No se pudo copiar. El número es ' + MESA);
+    }
+  });
+
+  // ---------- Confirmación por WhatsApp ----------
+  const form = $('formulario');
+  const cuantos = { adultos: 1, ninos: 1 };
+  const LIMITES = { adultos: [1, 10], ninos: [0, 10] };
+
+  function pintarContadores() {
+    for (const campo of Object.keys(cuantos)) {
+      $(campo).textContent = cuantos[campo];
+      form.querySelector(`[data-campo="${campo}"][data-paso="-1"]`).disabled = cuantos[campo] <= LIMITES[campo][0];
+      form.querySelector(`[data-campo="${campo}"][data-paso="1"]`).disabled = cuantos[campo] >= LIMITES[campo][1];
+    }
+  }
+  form.querySelectorAll('[data-campo]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const campo = btn.dataset.campo;
+      const [min, max] = LIMITES[campo];
+      cuantos[campo] = Math.min(max, Math.max(min, cuantos[campo] + Number(btn.dataset.paso)));
+      pintarContadores();
+    });
+  });
+  pintarContadores();
+
+  const asiste = () => form.querySelector('input[name="asiste"]:checked').value === 'si';
+  form.addEventListener('change', (e) => {
+    if (e.target.name !== 'asiste') return;
+    $('cuantos').hidden = !asiste();
+    $('enviar-texto').textContent = asiste() ? 'Confirmar por WhatsApp' : 'Avisar por WhatsApp';
+  });
+
+  const nombre = $('nombre');
+  nombre.addEventListener('input', () => {
+    if (nombre.value.trim()) {
+      nombre.removeAttribute('aria-invalid');
+      $('error-nombre').hidden = true;
+    }
+  });
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const quien = nombre.value.trim().replace(/\s+/g, ' ');
+    if (!quien) {
+      nombre.setAttribute('aria-invalid', 'true');
+      $('error-nombre').hidden = false;
+      nombre.focus();
+      return;
+    }
+    let mensaje;
+    if (asiste()) {
+      const a = cuantos.adultos, n = cuantos.ninos;
+      mensaje =
+        '¡Hola! Confirmamos asistencia a la fiesta de Esteban 🎤✨\n' +
+        'Sábado 21 de noviembre, 11:30 a. m.\n\n' +
+        'Nombre: ' + quien + '\n' +
+        'Adultos: ' + a + '\n' +
+        'Peques: ' + n;
+    } else {
+      mensaje =
+        '¡Hola! Gracias por la invitación a la fiesta de Esteban. ' +
+        'Lamentablemente no podremos ir. ¡Que se la pase increíble!\n\n' +
+        'Nombre: ' + quien;
+    }
+    const url = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(mensaje);
+    window.open(url, '_blank', 'noopener');
+    if (asiste()) festejar({ particleCount: 120, spread: 100, origin: origenDe($('enviar')) });
+    const nota = $('nota-form');
+    nota.textContent = '¿No se abrió WhatsApp? ';
+    const link = document.createElement('a');
+    link.href = url;
+    link.target = '_blank';
+    link.rel = 'noopener';
+    link.textContent = 'Toca aquí para enviar tu mensaje';
+    nota.append(link);
+  });
+})();
+</script>
+</body>
+</html>
